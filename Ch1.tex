@@ -228,7 +228,28 @@ Then:
 	$$ \alpha - x < \alpha \quad\because x > 0 $$
 	$$ \exists m \in \mathbb{Z} \text{, st. } \alpha - x < mx \quad\because a - x \text{ is not an upperbound of } \mathbf{A} $$
 	$$ \text{But then } \alpha < (m+1)x \in A \text{, which impossible because $\alpha$ is an upperbound for $\mathbf{A}$}$$
-	$$ \qed \text{(a) is true, aka the contrary is absurd} $$
+	$$ \therefore \text{(a) is true, aka the contrary is absurd} $$
+	
+	(b)
+	\begin{align*}
+		\text{\bf Given.}	\\
+			& x, y \in \mathbb{R} \land x < y			\\
+		\text{\bf Show.}	\\
+			& \exists p \in \mathbb{Q}: x < p < y \\
+		\text{\bf Proof.}	\\
+			& y - x > 0															& \because x < y				\\
+			& \exists n \in \mathbb{Z}: n \cdot (y-x) > 1 & \because proof (a)		\\
+			& \text{Let $m_1$ be the integer st. } nx < m_1									\\
+			& \text{Let $m_2$ be the integer st. } -nx < m_2								\\
+			& -m_2 < nx < m_1 \\
+			& \exists m \in \mathbb{Z}: -m_2 \le m \le m_1 & \because \mathbb{Z}\text{is ordered} \\
+			& m - 1 \le nx < m \\			
+			& nx < m \le nx + 1 < ny & (!!!) \\
+			& x < \frac{m}{n} < y & \because n > 0 \\
+			& \text{Let } p = \frac{m}{n} \\
+			& x < p < y \\
+			& \qed... ask about me
+	\end{align*}
 
 
 
