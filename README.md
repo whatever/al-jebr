@@ -1,4 +1,3 @@
-Rudin
-=====
+# Principles of Mathematical Analysis *by Rudin*
 
-Principles of Mathematical Analysis
+Files that I'm using to study for the Math Subject GRE with Rudin's principles of mathematical analsysis.

@@ -1,0 +1,139 @@
+\documentclass{article}
+
+\usepackage{amssymb,amsmath,amsfonts}
+\usepackage{}
+
+\newcommand{\set}[2]{
+	\{ #1 \mid #2 \}
+}
+
+\begin{document}
+
+Chapter 1.
+
+\section{Introduction}
+
+\subsection{Rational Numbers}
+
+$
+	\forall p \in \mathbb{Q}, \exists m, n \in \mathbb{Z}, \mid p = \frac{m}{n}
+$
+
+\subsection{Irrational Numbers}
+
+$
+	\exists p \in \mathbb{R}, s.t. \forall m, n \in \mathbb{Z}, p \neq \frac{m}{n}
+$
+
+\subsubsection{Example}
+
+Suppose:
+\begin{align*}
+	p \in \mathbb{Q} \\
+	m,n \in \mathbb{Z}, st. p =j \frac{m}{n} \\
+	gcd(m, n) = 1 \\
+\end{align*}
+
+\begin{align*}
+	p^2 & < 2 \\
+	\frac{m^2}{n^2} & < 2 \\
+	m^2 & < 2 n^2
+\end{align*}
+
+Then:
+\begin{align*}
+	q				& = p - \frac{p^2-2}{p+2} \\
+	q				& = \frac{2p-2}{p+2} \\
+	q^2			& = \frac{4p^2 - 8p - 4}{(p+2)^2} \\
+	q^2 - 2	& = \frac{(4p^2 - 8p - 4) - 2 (p+2)^2}{(p+2)^2} \\
+	q^2 - 2	& = \frac{(4p^2 - 8p + 4) - (2p^2 + 8p + 8)}{(p+2)^2} \\
+	q^2 - 2	& = \frac{2p^2 - 16p - 4}{(p+2)^2}
+\end{align*}
+
+\section{Ordered Sets}
+
+{\bf Definition.} Let S be a set. An \emph{order} on S is a relation, denoted by <, with the following two properties:
+
+\begin{equation}
+	If x,y \in S, \\
+	Then x < y, x = y, or y < x
+\end{equation}
+
+\begin{align*}
+	If: 		&	x, y, z \in S \\
+	And:		& x < y, y < z \\
+	Then:		&	x < z
+\end{align*}
+
+{\bf Definition.} An \emph{ordered set} is a set S in which an order is defined.
+
+{\bf Definition.}
+	Suppose S is an ordered set, and $ E \subset S $.
+	If there $ \exists \beta \in S, st. \forall x \in E, x < \beta $, then E is \emph{bounded above} by $\beta$.
+	
+{\bf Definition.}
+	Suppose $\mathbf{S}$ is an ordered set, $\mathbf{E} \subset \mathbf{S}$, and $\mathbf{E}$ is bounded above. Suppose there exists an $\alpha \in S$ with the following properties:
+	\begin{gather*}
+		\forall x \in \mathbf{E}, \quad x < \alpha \\
+		If \quad \gamma < \alpha, \quad then \quad \gamma is not an upper bound of \mathbf{E}
+	\end{gather*}
+	
+	Then:
+		$$ \alpha = \sup \mathbf{E} $$
+		
+\subsection{Examples}
+	(a) ***Ignored \\
+	(b) If $\alpha = \sup \mathbf{E}$ exists, then $\alpha$ may or may not be in $\mathbf{E}$. \\
+	(c) Let $\mathbf{E}$ consist of all numbers $\frac{1}{n}$, when n = 1\dots. Then, $\sup\mathbf{E} = 1$ and $\inf\mathbf{E} = 0$.
+	
+{\bf Definition.} An ordered set $\mathbf{S}$ is said to have the \emph{least-upperbound property} if the following is true: \\
+
+\begin{enumerate}
+	\item
+		If $\mathbf{E} \subset \mathbf{S}$, $\mathbf{E}$ is not empty, and $\mathbf{E}$ is bounded above,
+		then $\sup\mathbf{E} \in \mathbf{S}$
+\end{enumerate}
+
+
+{\bf Given.}
+	$$ \mathbf{S} \text{is an ordered set with a least upper bound} $$
+	$$ \alpha := x $$
+	$$ \mathbf{B} \subset \mathbf{S} $$
+	$$ \mathbf{B} \neq \emptyset $$
+	$$ \mathbf{L} := \set{y \in \mathbf{S}}{y \leq x \quad \forall x \in \mathbf{B}} $$
+
+{\bf Prove.}
+	$$ \alpha = \sup\mathbf{L} $$
+	$$ \alpha = \inf\mathbf{B} $$
+	
+{\bf Proof.}
+	$$ \text{Since $\mathbf{L}$ is bounded below, } \mathbf{L} \neq \emptyset $$
+	$$ \text{Every $\mathbf{B}$ is an upper-bound for $\mathbf{L}$} $$
+	$$ \text{$\mathbf{L}$ is bounded above, because $\mathbf{B}$ is nonempty} $$
+	$$ \sup\mathbf{L} \in \mathbf{S} \text{, because $\mathbf{S}$ has a least upperbound $\beta$, which is greater than everything in $\mathbf{S}$ and $\mathbf{L}$} $$
+	$$ \text{If } \gamma < \alpha, \quad \gamma \text{ is not an upper-bound of } \mathbf{L} $$
+	$$ \text{Thus } \gamma \notin \mathbf{B} $$
+	$$ \text{Thus } \alpha < x, \quad \forall x \in \mathbf{B} $$
+	$$ \text{Thus } \alpha \in \mathbf{L} $$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
