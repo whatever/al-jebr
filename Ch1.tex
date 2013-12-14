@@ -111,10 +111,41 @@ Then:
 	$$ \text{Every $\mathbf{B}$ is an upper-bound for $\mathbf{L}$} $$
 	$$ \text{$\mathbf{L}$ is bounded above, because $\mathbf{B}$ is nonempty} $$
 	$$ \sup\mathbf{L} \in \mathbf{S} \text{, because $\mathbf{S}$ has a least upperbound $\beta$, which is greater than everything in $\mathbf{S}$ and $\mathbf{L}$} $$
-	$$ \text{If } \gamma < \alpha, \quad \gamma \text{ is not an upper-bound of } \mathbf{L} $$
-	$$ \text{Thus } \gamma \notin \mathbf{B} $$
-	$$ \text{Thus } \alpha < x, \quad \forall x \in \mathbf{B} $$
+	$$ \text{If } \gamma < \alpha, \gamma \text{ is not an upper-bound of } \mathbf{L} \text{, and } \gamma \notin \mathbf{B} $$
+	$$ \text{Thus } \alpha \leq x, \quad \forall x \in \mathbf{B} $$
 	$$ \text{Thus } \alpha \in \mathbf{L} $$
+	$$ \text{But } \alpha \notin \mathbf{B} $$
+	$$ \text{Then this kinda becomes too confusing for me to follow on computer, because $\gamma$ comes out of nowhere} $$
+	
+\section{Fields}
+
+{\bf Definition.}
+	A \emph{field} is a set $\mathbf{F}$ with two operations, called \emph{addition} and \emph{multipleication}, which satisfy the field axioms:
+	\begin{description}
+		\item[\emph{closure addition}:]
+			If $x \in \mathbf{F}$, then their sum $x + y \in \mathbf{BF}$
+		\item[\emph{commutative addition}:]
+			$x + y = y + x$
+		\item[\emph{assosciative addition}:]
+			$(x + y) + z = x + (y + z)$
+		\item[\emph{identity addition}:]
+			$\mathbf{F}$ contains an element $0$ s.t. $0 + x = x, \quad \forall x\in F$
+		\item[\emph{Inverse addition}:]
+			$\forall x \in \mathbf{F}, \quad \exists -x \in \mathbf{F}, \text{ s.t. } x + (-x) = 0$
+		\item[\emph{Closure (multiplication)}:]
+			If $x \in \mathbf{F}$, then their product $x \cdot y \in \mathbf{BF}$
+		\item[\emph{Commutative (multiplication)}:]
+			$x \cdot y = y \cdot x$
+		\item[\emph{Assosciative (multiplication)}:]
+			$(x \cdot y) \cdot z = x \cdot (y \cdot z)$
+		\item[\emph{Identity (multiplication)}:]
+			$\mathbf{F}$ contains an element $1$ s.t. $1 \cdot x = x, \quad \forall x\in F$
+		\item[\emph{Inverse (multiplication)}:]
+			$\forall x \in \mathbf{F\setminus\{0\}}, \quad \exists x^{-1} \in \mathbf{F}, \text{ s.t. } x \cdot (x^{-1}) = 1$
+		\item[\emph{Distribution}:]
+			$x \cdot (y + z) = x \cdot y + x \cdot z, \quad \forall x, y, z \in \mathbf{F}$
+			
+	\end{description}
 
 
 
