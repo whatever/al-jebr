@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{amssymb,amsmath,amsfonts,amsthm}
+\include{commands}
+\begin{document}
+
+\section{Number Theory and Abstract Algebra}
+
+This takes up roughly 15\% of the test, but is partially involved in other
+questions. This is a common mix-in, to make a problem harder.
+
+\section{Divisibility}
+
+\subsection{Quick Rules for Factoring}
+
+\begin{itemize}
+  \item by 2, iff the last digit is divisible by 2
+  \item by 3, iff the sum of the digits is divisible by 3
+  \item by 4, iff the last \emph{two} digitis is divisible by 4
+  \item by 5, iff the last digit is 0 or 5
+  \item by 8, iff the last \emph{three} digits are divisible by 8
+  \item by 9, iff the sum of the digits is divisible by 9
+\end{itemize}
+
+\subsection{Division Algorithm}
+
+If $a, b \in \mathbb{Z}^+$, then $\exists q, r \in \mathbb{Z} : b = qa + r$
+
+
+\subsection{Primes}
+
+$ \forall \in \mathbb{Z}^+, \exists \text{prime} p : k < p < 2k $
+
+$ \sum{k=1}^n{\frac{1}{p_k}} $ divierges where $p_k$ is the k-th prime
+
+\subsection{GCD and LCD}
+
+Greatest-common-division and least-common-denominator come up in group size and
+and various algorithmic problems.
+
+\pagebreak
+\subsubsection{GCD}
+
+...
+
+For any integers $a, b$, we can write:
+  \begin{align*}
+    a   & = (p_1)^{a_1} (p_2)^{a_2} ... (p_k)^{a_k}     \\
+    b   & = (p_1)^{b_1} (p_2)^{b_2} ... (p_k)^{b_k}     \\
+    m_i & \defeq min(a_i, b_i)                          \\
+    M_i & \defeq max(a_i, b_i)                          \\
+    gcd(a, b) & \defeq (p_1)^{m_1} (p_2)^{m_2} (\dots) (p_k)^{m_k} \\
+    lcM(a, b) & \defeq (p_1)^{M_1} (p_2)^{M_2} (\dots) (p_k)^{M_k} \\
+  \end{align*}
+
+As a result:
+  $$ gcd(a, b) \cdot lcm(a, b) = a \cdot b $$
+
+\subsubsection{Euclidean Algorithm}
+
+Algorithmically determine the greatest common divisor between two numbers. This
+divides the larger number by the smaller and continually checks whether it did
+it evenly. When $r = 0$ we know $ r | b_k, b_{k-1}, b_{k-2}, ..., b_0 $ and that
+it must be the largest such number that does it.
+
+\begin{verbatim}
+  def gcd (a, b):
+    if b < a: (a, b) = (b, a)
+
+    r = b % a
+
+    while r != 0:
+      # Note: b = a * m + r
+      b = a
+      a = r
+      m = b // a
+      r = b % a
+
+    return a
+\end{verbatim}
+
+\subsubsection{Diophantine Equation}
+
+\emph{Starting here tomorrow}
+
+\end{document}
