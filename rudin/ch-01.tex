@@ -10,6 +10,18 @@
 	\{ #1 \mid #2 \}
 }
 \newcommand{\qeq}{\stackrel{?}{=}}
+\newcommand{\defeq}{\stackrel{\text{def}}{=}}
+
+
+\newcommand{\DEFINITION}[1]{
+  \label{def-#1}
+  {\noindent \bf Definition #1}
+}
+
+\newcommand{\THEOREM}[1]{
+  \label{theorem-#1}
+  {\noindent \bf #1 Theorem}
+}
 
 \begin{document}
 
@@ -284,5 +296,123 @@ Then:
 
 
 
+  \pagebreak
+
+  \section{Extended Real Number Line}
+
+  {\noindent \bf Definition 1.23}\label{def-1-23} The extended real reals $\defeq \mathbb{R} \cup { -\infty, +\infty } $ 
+
+  {\noindent} $ \forall x \in \mathbb{R}, -\infty < x < \infty $
+
+  Note that the extended-reals do not form a field, however the following is "customary":
+
+  \begin{itemize}
+    \item
+      \begin{itemize}
+        \item $ x + \infty = +\infty $
+        \item $ x - \infty = -\infty $
+        \item $ \frac{x}{+\infty} = \frac{x}{-\infty} = 0 $
+      \end{itemize}
+    \item
+      \begin{itemize}
+        \item If $x > 0$, then $x \cdot (+\infty) = +\infty$
+        \item If $x > 0$, then $x \cdot (-\infty) = -\infty$
+      \end{itemize}
+    \item
+      \begin{itemize}
+        \item If $x < 0$, then $x \cdot (+\infty) = -\infty$
+        \item If $x < 0$, then $x \cdot (-\infty) = +\infty$
+      \end{itemize}
+  \end{itemize}
+
+  \section{The Complex Field $\mathbb{C}$}
+
+  \DEFINITION{1.24} A \emph{complex} number is an ordered pair $(a, b)$ with $a, b \in \mathbb{R}$ 
+
+  We define, $ \forall x, y \in \mathbb{C} $:
+  \begin{itemize}
+    \item $ x + y = (a + c, b + d) $
+    \item $ x y = (ac - bd, ad + bc) $
+    \item $ 0 = (0, 0) $
+    \item $ I = (1, 0) $
+  \end{itemize}
+
+  \THEOREM{1.25} $\mathbb{C}$ is a field
+
+  \begin{align*}
+    {\bf Prove.} \\
+      & \mathbb{C} \text{is a field} \\
+    {\bf Given.} \\
+      & x = (a, b), y = (c, d), z = (e, f)
+    {\bf Proof.} \\
+      & \text{(A1)} x + 0 = (a, b) + (0, 0) = (a + 0, b + 0) = (a, b) \\
+      & \text{(A2)} x + y = (a, b) + (c, d) = (a + c, b + d) = (c + a, d + b) = y + x \\
+      & \text{(A3)} (x + y) + z = (a + c, b + d) + (e, f) = (a + c + e, b + d + f) = (a, b) + (c + e, d + f) = x + (y+z)
+      & \text{\emph{Skipping a few...}}
+      & \text{M2} xy = (ac - bd, ad + bc) = (ca - db, da + cd) = yx
+  \end{align*}
+
+  \pagebreak
+
+  \DEFINITION{1.30} If $a, b \in \mathbb{R}$ and $z = a + bi$, then the complex number $\overline{z} = a - bi$
+
+  \THEOREM{1.31}
+  \begin{itemize}
+    \item $ \overline{z + w} = \overline{z} + \overline{w} $
+    \item $ \overline{zw} = \overline{z} \cdot \overline{w} $
+    \item $ z + \overline{z} = 2 \text{Re(z)}, z - \overline{z} = 2 i \text{Im(z)} $
+    \item $ z \overline{z} \in \mathbb{R}^{+} \text{unless} z = 0 $
+  \end{itemize}
+
+  \DEFINITION{1.32} $ |z| = (z\overline{z})^{\frac{1}{2}} $
+
+  \THEOREM{1.33} $z, w \in \mathbb{C} $
+  \begin{itemize}
+    \item $ |z| \geq 0; |z| = 0 \iff z = 0 $
+    \item $ |\overline{z}| = |z| $
+    \item $ |zw| = |z||w| $
+    \item $ |\text{Re(z)}| \leq |z| $
+    \item $ |z + w| \leq |z| + |w| $
+  \end{itemize}
+
+  Note that 1, 2, 3, 4 are \emph{really} easy. So here's 5:
+
+  \begin{align*}
+    {\bf Prove.} \\
+      & |z + w| \leq |z| + |w| \\
+    {\bf Given.} \\
+      & z, w \in \mathbb{C} \\
+    {\bf Proof.} \\
+      & |z+w|^2 & = (z+w)(\overline{z+w}) = z\overline{z} + z\overline{w} + \overline{z}w + w\overline{w} \\
+      & & = |z|^2 + 2\text{Re($z\overline{w}$)} + |w|^2 & \because |z|^2 = z\overline{z} \land \overline{z\overline{w}} = \overline{z}w \\
+      & & \leq |z|^2 + 2\text{Re($z$)} + |w|^2 \\
+      & & = |z|^2 2 |z| |w| + |w|^2 = (|z| + |w|)^2 \\
+      & & \therefore |z+w| \leq |z| + |w| \because |z| + |w| \in \mathbb{R} > 0
+  \end{align*}
+
+  \THEOREM{1.35} If $ a_1, ..., a_n and b_1, ..., b_n \in \mathbb{C} $, then: \\
+  {\indent} $ |\sum_{j=1}^n a_j\overline{b_j}|^2 \leq \sum_{j=1}^n |a_j|^2 \sum_{j=1}^n |b_j|^2$
+
+  \pagebreak
+
+  \begin{align*}
+    {\bf Proof.}  \\
+      & ...       \\
+    {\bf Given.}  \\
+      & A = \sum{a_j}^2 \\
+      & B = \sum{b_j}^2 \\
+      & C = \sum{a_j\overline{b_j}} \\
+    {\bf Prove.}  \\
+      \sum{|B a_j - C b_j|}^2 & = \sum{(B a_j - C b_j)(B\overline{a_j} - \overline{C b_j})} \\
+      & = B^2 \sum{|a_j}^2 - B \overline{C} \sum{a_j\overline{b_j}} - B C \sum{\overline{a_j} b_j} + |C|^2 \sum{|b_j}^2 \\
+      & = B^2 - B |C|^2 \\
+      & = B (AB - |C|^2)
+      & B (AB - |C|^2) > 0  & \because B>0  \\
+      & AB - |C|^2 > 0      & \because B>0  \\
+      & \therefore AB > |C|^2               \\
+      & |C|^2 = |\sum{a_j\overline{b_j}}|^2 \leq \sum{|a_j|}^2\sum{|b_j|}^2 - AB \qed \\
+  \end{align*}
+
+  \section{Euclidean Spaces}
 
 \end{document}
