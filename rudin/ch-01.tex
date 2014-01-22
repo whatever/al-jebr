@@ -413,6 +413,31 @@ Then:
       & |C|^2 = |\sum{a_j\overline{b_j}}|^2 \leq \sum{|a_j|}^2\sum{|b_j|}^2 - AB \qed \\
   \end{align*}
 
+  \pagebreak
   \section{Euclidean Spaces}
+
+  \DEFINITION{1.36} $\mathbb{R}^k$ is the set of all ordered tuples, such that:
+  $ \vec{x} = (x_1, x_2, \dots, x_k) : \forall k > 0, x_k \in \mathbb{R} $
+
+  Vectors form a field! With $+$ and $*$
+
+  In addition to field operations, vector-spaces contain \emph{scalar multiplication}, \emph{inner product}, and a \emph{norm}:
+
+  \begin{itemize}
+    \item $ \alpha \vec{x} = (\alpha x_1, \dots, \alpha x_k) $
+    \item $ \vec{x} \cdot \vec{y} = \sum_{i=1}^k{x_i y_i}$
+    \item $ |\vec{x}| = (\vec{x} \cdot \vec{x})^\frac{1}{2} $
+  \end{itemize}
+
+  {\bf Proof.} Schwartz Inequality \\
+  
+  $|x+y| \leq |x| + |y|, \forall x, y, z \in \mathbb{R}^k$
+
+  \begin{align*}
+    |x + y|^2 & =     (x+y) \cdot (x+y) \\
+              & =     x \cdot x + 2 x \cdot y + y \cdot y \\
+              & \leq  |x|^2 + 2|x||y| + |y|^2 \because x \cdot y \leq |x||y| \\
+              & = (|x| + |y|)^2
+  \end{align*}
 
 \end{document}
