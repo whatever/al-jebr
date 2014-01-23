@@ -1,6 +1,10 @@
 \documentclass{article}
 \usepackage{amssymb,amsmath,amsfonts,amsthm}
 \include{commands}
+
+\newcommand{\congr}[3]{
+  #1 \equiv #2\ (\textrm{mod}\ #3)
+}
 \begin{document}
 
 \section{Number Theory and Abstract Algebra}
@@ -78,8 +82,82 @@ it must be the largest such number that does it.
     return a
 \end{verbatim}
 
-\subsubsection{Diophantine Equation}
+\subsubsection{Diophantine Equation $ax +by = c$}
 
-\emph{Starting here tomorrow}
+The Simple Linear Diophantine Equations $ax + by = c$ has solutions of the form:\\
+  $ x = x_1 + \frac{b}{d} t $\\
+  $ y = y_1 - \frac{a}{d} t $
+
+  Finding $x_1$ and $y_1$ is the only real hard part. We know that we can \emph{always} find solutions of the form: \\
+  $ a x_0 + b y_0 = d $ where $d = gcd(a, b)$
+
+  After solving this equation, we multiply both sides of the equation by $\frac{c}{d}$ to get:
+  $ a \frac{c}{d} x_0 + b \frac{c}{d} y_0 = d \frac{c}{d} $
+
+  Define: \\
+  $ x_1 = \frac{c}{d} x_0 $ \\
+  $ y_1 = \frac{c}{d} y_0 $ \\
+
+  Then plug in these values of $x_1$ and $y_1$ to attain solutions: \\
+  $ x = \frac{c}{d} x_0 + \frac{b}{d} t $
+  $ y = \frac{c}{d} y_0 - \frac{a}{d} t $
+
+  As an aside, note the negative in y's value. This seems to relate to the Euclidean algorithm.
+
+
+  \pagebreak
+  \subsection{Congruences}
+
+  Rules for congruences:
+  \begin{itemize}
+    \item $\congr{a}{b}{n}$ and $\congr{b}{c}{n}$, then $\congr{a}{c}{n}$
+
+    \item
+      $\congr{a}{b}{n}$, then $\forall c \in \mathbb{Z}$
+      \begin{itemize}
+        \item $\congr{a \pm c}{b \pm c}{n}$
+        \item $\congr{a c}{b c}{n}$
+      \end{itemize}
+
+    \item
+      If $\congr{a_1}{b_1}{n}$ and $\congr{a_2}{b_2}{n}$, then:
+      \begin{itemize}
+        \item $\congr{a_1 \pm a_2}{b_1 \pm b_2}{n}$
+        \item $\congr{a_1 a_2}{b_1 b_2}{n}$
+      \end{itemize}
+
+    \item
+      $\forall\ 0 < c \in \mathbb{Z}$, the following are equivalent:
+      \begin{itemize}
+        \item $\congr{a}{b}{n}$
+        \item $\congr{a}{b + n}{cn}$
+        \item $\congr{a}{b + 2n}{cn}$
+        \item \dots
+        \item $\congr{a}{b + (c-1)n}{cn}$
+      \end{itemize}
+
+    \item
+      If $\congr{ab}{ac}{n}$, then:
+      \begin{itemize}
+        \item $\congr{b}{c}{n}$ if $d\defeq$ gcd($a$, $n$) $= 1$
+        \item $\congr{b}{c}{\frac{n}{d}}$ if $d\defeq$ gcd($a$, $n$) $> 1$
+      \end{itemize}
+
+    \item
+      The linear congruence equation $\congr{ax}{b}{n}$ has a solution iff gcd($a$, $n$) $ = d | b$ and:
+      \begin{itemize}
+        \item if $d=1$, then the solution is unique mod $n$
+        \item if $d>1$, then the solution is unique mod $\frac{n}{d}$
+      \end{itemize}
+  \end{itemize}
+
+  \subsection{Congruence Equation $\congr{ax}{b}{n}$}
+
+  Note that Linear Congruence Equations are \emph{equivalent} to
+  Simple, Linear Diophantine Equations.
+
+  Solving these requires applying rules 1-7 of the previous section. They are pretty arduous.
+
+  \section{Abstract Algebra}
 
 \end{document}
