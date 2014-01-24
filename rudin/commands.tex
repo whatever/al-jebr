@@ -1,10 +1,11 @@
 % Set builder notation
 \newcommand{\set}[2]{
-	\{ #1 \mid #2 \}
+	\{\ #1 \mid #2\ \}
 }
 
 % ?=
 \newcommand{\qeq}{\stackrel{?}{=}}
+
 % def=
 \newcommand{\defeq}{\stackrel{\text{def}}{=}}
 
@@ -18,4 +19,14 @@
 \newcommand{\THEOREM}[1]{
   \label{theorem-#1}
   {\noindent \bf #1 Theorem}
+}
+
+% Generator: <a>
+\newcommand{\gen}[1]{
+  \langle #1 \rangle
+}
+
+% Modulo: (mod 3)
+\newcommand{\modulo}[1]{
+  \ (\textrm{mod}\ #1)
 }
