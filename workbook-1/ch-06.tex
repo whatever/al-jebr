@@ -236,7 +236,7 @@ The Simple Linear Diophantine Equations $ax + by = c$ has solutions of the form:
 
     \item
       Let $\mathbf{G}$ be a finite, abelian group of order $n$.
-      Then $\mathbf{G}$ has a least subgroup of order $d | n$, for every
+      Then $\mathbf{G}$ has at least one subgroup of order $d | n$, for every
       positive divisor $d$ of $n$. 
 
     \item
@@ -256,6 +256,83 @@ The Simple Linear Diophantine Equations $ax + by = c$ has solutions of the form:
       Let $\mathbf{G}$ be a finite subgroup of order $n$. Let $n = p^k m$, where
       $p$ is prime and $p\not | m$. Then $\mathbf{G}$ has at least one subgroup
       of order $p^i \ \forall i \in [0 \dots k]$. ({\bf Sylow's first theorem})
-
   \end{itemize}
+
+
+  \subsection{Isomorphism}
+
+  Structural properties of groups:
+  \begin{itemize}
+    \item Order
+    \item Abelian-ness
+    \item Cyclic
+    \item \emph{et cetera}
+  \end{itemize}
+
+  Note that, $\mathbf{G} \subset \mathbf{M}_2(\mathbb{Z}, \times) \cong$ Klein Group, when $\mathbf{G}$ is:\\
+  $I = \begin{pmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{pmatrix}$
+  $A = \begin{pmatrix}
+    1 & 0 \\
+    0 & -1
+  \end{pmatrix}$, -I, -A
+
+
+  Thus $\mathbf{M}_2(\mathbb{Z}) \cong \mathbf{V}_4$.
+
+
+  \subsection{Classification of Finite Abelian Groups}
+
+  First, let $\mathbf{G}_1$, $\mathbf{G}_2$ be finite Abelian on the set:\\
+  $\mathbf{G}_1 \times \mathbf{G}_2 = \set{(a, b)}{a \in \mathbf{G}_1, b \in \mathbf{G}_2}$
+
+  Define a binary operations, *, by the equation:\\
+    $(a_1, a_2) * (b_1, b_2) = (a_1 *_1 b_1,\ a_2 *_2 b_2)$
+
+  Some facts:
+  \begin{itemize}
+    \item
+      The direct sum $\mathbb{Z}_m \times \mathbb{Z}_n$ is cyclic iff
+      $\gcd(m, n) = 1$. If this is true, then
+      $|\mathbb{Z}_m \times \mathbb{Z}_n| = m n$, and is isomorphic to $\mathbb{Z}_{mn}$.
+
+    \item 
+      The above can be generalized:
+      $\mathbb{Z}_{m_1} \times \mathbb{Z}_{m_2} \times \dotso \times \mathbb{Z}_{m_k}$
+      is cyclic iff $\gcd(m_i, m_j) = 1$ for every distinct pair. If this is
+      true, then:
+      $\mathbb{Z}_{m_1} \times \dots \times \mathbb{Z}_{m_k} \cong \mathbb{Z}_{m_1 \dotsm m_k}$
+
+    \item 
+      Every finite Abelian group $\mathbf{G}$ is isomorphic to \emph{some}
+      direct sum of the form: \\
+      $\mathbb{Z}_{(p_1)^{k_1}} \times \mathbb{Z}_{(p_2)^{k_2}} \times \dotsm \times \mathbb{Z}_{(p_n)^{k_n}}$ \\
+      where $p_i$ are not necessarily distinct, and $k_i$ are not necessarily
+      distinct. These are the \emph{elementary divisors} of $\mathbf{G}$.
+
+    \item
+      Alternatively, we can write it another way:\\
+      $\mathbb{Z}_{m_1} \times \mathbb{Z}_{m_2} \times \dotsm \times \mathbb{Z}_{m_n}$\\
+      Where $m_1 \geq 2$, $m_1 | m_2$, \dotso, $m_{n-1} | m_n$ \\
+      Note that, $m_1, \dots, m_n$ are not distinct, but is a \emph{unique} list.
+      These are the \emph{invariant factors} of the group.
+  \end{itemize}
+
+  \subsubsection{An Example}
+
+  Show how many distinct (up to isomorphism) Abelian groups of order 600 exist:
+
+  $600 = 2^3 \cdot 3 \cdot 5^2$ \\
+  \begin{align*}
+    600 & = 2 \cdot 2 \cdot 2\cdot 3 \cdot 5 \cdot 5  \\
+        & = 2 \cdot 2^2 \cdot 3 \cdot 5 \cdot 5       \\
+        & = 2^3 \cdot 3 \cdot 5 \cdot 5               \\
+        & = 2 \cdot 2 \cdot 2\cdot 3 \cdot 5^2        \\
+        & = 2 \cdot 2^2 \cdot 3 \cdot 5^2             \\
+        & = 2^3 \cdot 3 \cdot 5^2                     \\
+  \end{align*}
+
+  Or rather $3 \cdot 1 \cdot 2 = 6$
 \end{document}
