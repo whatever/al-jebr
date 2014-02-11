@@ -365,7 +365,53 @@ The Simple Linear Diophantine Equations $ax + by = c$ has solutions of the form:
   And is a group, naturally.
    
 
+  % RINGS
+  % RINGS
+  % RINGS
   \subsection{Rings}
+
+  {\noindent}{\bf Definition.} A ring is a set with two binary operators on, such that: \\
+  \begin{itemize}
+    \item $(\mathbf{R}, +)$ is an \emph{Abelian Group}
+    \item $(\mathbf{R}, \cdot)$ is a \emph{semigroup} (closed, assosciateive)
+    \item
+      Has the distributive law defined on it:
+      \begin{itemize}
+        \item $a \cdot (b + c) = a \cdot b + a \cdot c$
+        \item $(a + b) \cdot c = a \cdot b + a \cdot c$
+      \end{itemize}
+  \end{itemize}
+
+  % RING H-MORPHISMS
+  % RING H-MORPHISMS
+  % RING H-MORPHISMS
+  \subsection{Ring Homomorphisms}
+
+  {\noindent}$(\mathbf{R}, +, \times) \cong (\mathbf{R}', \oplus, \otimes)$ iff:\\
+  \begin{itemize}
+    \item
+      $\phi(a + b) = \phi(a) \oplus \phi(b),\ \forall a, b \in \mathbf{R}$
+    \item
+      $\phi(a \times b) = \phi(a) \otimes \phi(b),\ \forall a, b \in \mathbf{R}$
+  \end{itemize}
+
+  \subsubsection{Properties of Rings}
+
+  \begin{itemize}
+
+    \item
+      The \emph{kernel} of a ring homomorphism is the set
+      $\ker \phi \defeq \set{a\in\mathbf{R}}{\phi(a)=0'}$, where $0'$ is the
+      additive identity in $\mathbf{R}$
+
+    \item
+      The image of $\mathbf{R}$, $\phi(\mathbf{R}) = \set{\phi(r)}{r \in \mathbf{R}}$
+      is a subring in $\mathbf{R}'$
+
+    \item
+      $\phi(0) = 0'$ and $\phi(-r) = -\phi(r), \forall r \in \mathbf{R}$
+
+  \end{itemize}
 
 
 \end{document}
