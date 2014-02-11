@@ -14,7 +14,8 @@ I wouldn't if it was in Five Stars).
 ## Manifest
 
 * `/rudin` : A study using *Principles of Mathematics by Rudin*
-* `/definitions` : 
+* `/workbook-1` : First GRE Workbook
+* `/exams` : Lessons learned from practice exam, and explanation of tricky solutions.
 
 ## Manifesto
 

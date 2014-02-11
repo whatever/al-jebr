@@ -335,4 +335,37 @@ The Simple Linear Diophantine Equations $ax + by = c$ has solutions of the form:
   \end{align*}
 
   Or rather $3 \cdot 1 \cdot 2 = 6$
+
+  %
+  %
+  %
+  \pagebreak
+  \subsection{Group Homomorphisms}
+  \label{sub-group-homomorphisms}
+
+  $\phi$ is a homomorphism if: \\
+  $\phi(a \cdot b) = \phi(a)\ast\phi(b)$
+
+  \subsubsection{Properties of Homomorphisms}
+
+  \begin{itemize}
+    \item If $e$ is the identity element of $\mathbf{G}$, then $\phi(e)$ is the identity element of $\mathbf{G}'$
+    \item If $g \in \mathbf{G}$ has finite order $m$, then $\phi(g)$ has order $m$
+    \item If $a^{-1}$ is the inverse of $a \in \mathbf{G}$, then $\phi{a^{-1}}$ is the inverse of $\phi{a}\in\mathbf{G}'$
+    \item If $\mathbf{H}$ is a subgroup of $\mathbf{G}$, then $\phi(\mathbf{H})$ is a subgroupf of $\mathbf{G}'$
+    \item If $\mathbf{G}$ is finite, then the order of $\phi(\mathbf{G})$ divides the order of $\mathbf{G}$
+    \item If $\mathbf{G}'$ is finite, then the order of $\phi(\mathbf{G})$ divides the order of $\mathbf{G}'$
+    \item
+      If $\mathbf{H}'$ is a subgroup of $\mathbf{G}'$, then $\phi^{-1}(\mathbf{H}')$ is a subgroup of $\mathbf{G}$, where: \\
+      $\phi^{-1}(\mathbf{H}') = \set{h \in \mathbf{G}'}{\phi(h) \in \mathbf{H}'}$
+  \end{itemize}
+
+  {\noindent}The kernel of $\phi$ is defined:\\
+  {\indent}$\ker \phi \defeq \set{g\in\mathbf{G}}{\phi(g) = e'}$
+  And is a group, naturally.
+   
+
+  \subsection{Rings}
+
+
 \end{document}
