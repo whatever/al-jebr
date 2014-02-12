@@ -1,0 +1,71 @@
+\documentclass{article}
+
+\usepackage{amssymb,amsmath,amsfonts,amsthm}
+\include{commands}
+
+\begin{document}
+
+\section{Rings}
+
+% RING HOMOMORPHISMS
+% ...
+% ...
+\subsection{Ring Homomorphisms}
+
+$\phi$ is a \emph{ring homomorphism}, if:
+\begin{itemize}
+  \item $\phi(a+b)=\phi(a)\oplus\phi(b)$
+  \item $\phi(a \cdot b)=\phi(a)\otimes\phi(b)$
+\end{itemize}
+
+% FEATURES OF RING HOMOMORPHISMS
+% ...
+% ...
+\subsection{Features of Ring Homomorphisms}
+
+
+\begin{enumerate}
+  \item
+    The \textbf{kernel} of a ring homomorphism is the set:\\
+    $\ker \phi \defeq \set{a\in\mathbf{R}}{\phi(a)=0'}$ \\
+    Note that $\ker\phi: \mathbf{R} \mapsto \mathbf{R'}$ is a subring of
+    $\mathbf{R}$
+  \item
+    The image of $\mathbf{R}$, $\phi(\mathbf(R)$ is a subring of $\mathbf{R'}$
+  \item
+    The image of $0_+\in\mathbf{R}$ is $0_+'\in\mathbf{R'}$.\\
+    Note that this means: $\phi(-a)=-\phi(a)$
+
+\end{enumerate}
+
+
+\subsection{Extensions of Rings}
+
+{\noindent}Rings are sets $\mathbf{R}$ where:
+\begin{itemize}
+  \item $(\mathbf{R}, +)$ is an Abelian group
+  \item $(\mathbf{R}, \cdot)$ is a semigroup (multiplication is associative)
+  \item
+    The \emph{distributive law} holds:
+    $a \cdot (b + c) = (a + b) \cdot c = a \cdot c + a \cdot b$
+\end{itemize}
+
+{\noindent}Types of rings, and elemts:
+\begin{itemize}
+  \item
+    A {\bf Ring with Unity} is a a ring where $(R, \cdot)$ is a
+    monoid (closed, associative, identity)
+  \item
+    A {\bf Unit} is a \emph{ring element} that has a multiplicative
+    inverse.
+  \item
+    A {\bf Division Ring} is a ring where every nonzero element has a
+    \emph{multiplicative inverse}.
+  \item
+    An {\bf Integral Domain} is a commutative ring, where:
+    $a \cdot b = 0 \iff a=0 \lor b=0$
+  \item
+    A {\bf Field} is a commutative \emph{division ring}.
+\end{itemize}
+
+\end{document}
